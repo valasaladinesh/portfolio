@@ -1,0 +1,140 @@
+/* ======== Index of CSS =======
+:: 1.0 Web fonts
+:: 2.0 Global variables
+:: 3.0 Common CSS
+:: 4.0 Navbar section
+:: 5.0 About section
+:: 6.0 Skills section
+:: 7.0 Portfolio section
+:: 8.0 Contact section
+:: 9.0 Footer section
+::
+============================= */
+
+/* =============================
+::1.0 Web fonts
+============================= */
+
+
+
+/* =============================
+::2.0 Global variables
+============================= */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root{
+  /* background color */
+  --bg-card-shadow:0 0.188rem 1.25rem 0px rgba(0,0,0,0.06);
+
+  /* text colors */
+  --text-white: #ffff;
+  --text-black: #2C2C2C;
+  --text-light-gray: #7e8085;
+  --text-light-black: #444;
+}
+
+/* =============================
+:: 3.0 Common CSS
+============================= */
+body {
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-size: 1rem;
+}
+a{
+  text-decoration: none;
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+ul li{
+  list-style: none;
+}
+
+
+/* =============================
+:: 4.0 Navbar section
+============================= */
+/* =============================
+:: 5.0 About section
+============================= */
+.dp {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  animation: fadeIn 10s infinite;
+  -webkit-animation: fadeIn 10s infinite;
+}
+@keyframes fadeIn {
+  0% {opacity:0.5;}
+  30%, 100% {opacity:1;}
+}
+
+
+/* =============================
+:: 6.0 Skills section
+============================= */
+.progress-bar{
+  width: var(--anim-width);
+}
+/* Animations */
+[data-aos="progress-animation"] {
+  width: 0;
+  transition-property: width;
+}
+[data-aos="progress-animation"].aos-animate {
+  width: var(--anim-width);
+  opacity: 1;
+}
+/* =============================
+:: 7.0 Portfolio section
+============================= */
+/* =============================
+:: 8.0 Contact section
+============================= */
+/* =============================
+:: 9.0 Footer section
+============================= */
+
+
+
+
+
+
+
+.mt-6 {
+  margin-top: 5rem;
+}
+
+.mt-header {
+  margin-top: 6rem;
+}
+
+.progress{
+  padding: 0;
+}
+
+.card-fit-size{
+  width: 100%;
+  height: 100%;
+}
+.inner{
+  overflow: hidden;
+}
+.inner img{
+  transition: all 1s ease;
+}
+.inner:hover img{
+  transform: scale(1.3);
+}
+
+/* @keyframes progressBar {
+  0% { width: 0; }
+  100% { width: var(--anim-width); }
+} */
+
