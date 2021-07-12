@@ -15,23 +15,22 @@
 ::1.0 Web fonts
 ============================= */
 
-
-
 /* =============================
 ::2.0 Global variables
 ============================= */
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-:root{
+:root {
   /* background color */
-  --bg-card-shadow:0 0.188rem 1.25rem 0px rgba(0,0,0,0.06);
+  --bg-card-shadow: 0 0.188rem 1.25rem 0px rgba(0, 0, 0, 0.06);
+  --bg-white: #ffff;
 
   /* text colors */
   --text-white: #ffff;
-  --text-black: #2C2C2C;
+  --text-black: #2c2c2c;
   --text-light-gray: #7e8085;
   --text-light-black: #444;
 }
@@ -41,28 +40,79 @@
 ============================= */
 body {
   position: relative;
-  overflow-y: scroll;
   overflow-x: hidden;
   font-size: 1rem;
 }
-a{
-  text-decoration: none;
-}
-ul{
+html, body {
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
 }
-ul li{
+a {
+  text-decoration: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
   list-style: none;
 }
-
 
 /* =============================
 :: 4.0 Navbar section
 ============================= */
+.navbar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: transparent;
+}
+/* scroll behavior */
+.navbar-sticky{
+  -webkit-transition: none;
+  transition: none;
+}
+.navbar-sticky-transitioned{
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.navbar-sticky-moved-up {
+  position: fixed;
+  top: 0;
+  background: var(--bg-white);
+  margin-top: -6.25rem;
+}
+.navbar-sticky-on {
+  margin-top: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px;
+}
+
 /* =============================
 :: 5.0 About section
 ============================= */
+.landing{
+  padding: 0;
+  margin: 0;
+}
+#about::before {
+  content: "";
+  width: 100%;
+  height: 90vh;
+  top: 0px;
+  left: 0px;
+  background: url("/background.jpeg") no-repeat center center/cover;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.3;
+}
 .dp {
   width: 25rem;
   height: 25rem;
@@ -71,17 +121,18 @@ ul li{
   -webkit-animation: fadeIn 10s infinite;
 }
 @keyframes fadeIn {
-  0% {opacity:0.5;}
-  30%, 100% {opacity:1;}
+  0% {
+    opacity: 0.5;
+  }
+  30%,
+  100% {
+    opacity: 1;
+  }
 }
-
 
 /* =============================
 :: 6.0 Skills section
 ============================= */
-.progress-bar{
-  width: var(--anim-width);
-}
 /* Animations */
 [data-aos="progress-animation"] {
   width: 0;
@@ -91,45 +142,74 @@ ul li{
   width: var(--anim-width);
   opacity: 1;
 }
+
+
+/* =============================
+:: 6.0 || Technology Slider
+============================= */
+.card-skills{
+  width: 10rem;
+  height: 10rem;
+  overflow:hidden;
+  padding:10px 10px;
+  border: hidden;
+  border-radius: 5%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
+}
+.card-skills img{
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+
 /* =============================
 :: 7.0 Portfolio section
 ============================= */
 /* =============================
 :: 8.0 Contact section
 ============================= */
+.img-border{
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid rgb(102, 99, 99);
+  border-radius: 50%;
+  margin: 10px;
+}
 /* =============================
 :: 9.0 Footer section
 ============================= */
 
-
-
-
-
-
-
 .mt-6 {
   margin-top: 5rem;
+}
+
+.pt-header {
+  padding-top: 6rem;
+}
+.pb-header {
+  padding-bottom: 6rem;
 }
 
 .mt-header {
   margin-top: 6rem;
 }
 
-.progress{
+.progress {
   padding: 0;
 }
 
-.card-fit-size{
+.card-fit-size {
   width: 100%;
   height: 100%;
 }
-.inner{
+.inner {
   overflow: hidden;
 }
-.inner img{
+.inner img {
   transition: all 1s ease;
 }
-.inner:hover img{
+.inner:hover img {
   transform: scale(1.3);
 }
 
@@ -137,4 +217,3 @@ ul li{
   0% { width: 0; }
   100% { width: var(--anim-width); }
 } */
-

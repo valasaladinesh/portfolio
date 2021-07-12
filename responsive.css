@@ -1,0 +1,12 @@
+@media (min-width: 0px) and (max-width: 992px) {
+  .row-about {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .dp {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+  }
+}
