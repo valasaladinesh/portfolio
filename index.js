@@ -2,7 +2,6 @@
 // scroll fucntion
 function navMenu(){
     var navBar =  document.querySelector('.navbar-sticky');
-    console.log("hey")
 
     window.onscroll = function(){
         var scroll = document.documentElement.scrollTop;
@@ -28,8 +27,9 @@ navMenu();
 
 function loadDpImages() {
     var images = [
-        "./dinesh.jpg",
-        "./dinesh2.jpg"
+        "./images/dp/dinesh_dp_1.jpg",
+        "./images/dp/dinesh_dp_2.jpg",
+        "./images/dp/dinesh_dp_3.jpg"
     ]
     
     var dpimage = document.getElementById('dp');

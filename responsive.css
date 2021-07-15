@@ -1,12 +1,79 @@
-@media (min-width: 0px) and (max-width: 992px) {
+@media (min-width: 0px) and (max-width: 993px) {
   .row-about {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
   }
   .dp {
-    width: 15rem;
-    height: 15rem;
-    border-radius: 50%;
+    width: 20rem;
+    height: 20rem;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+  #landing{
+    text-align: center;
+  }
+  /* testimonial section */
+  #myCarousel{
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  /* modal section */
+  .modal-dialog{
+    max-width: 600px !important;
+  }
+  /* landing section background */
+  #landing::before {
+    height: 18%;
+  }
+
+  /* contact us form */
+  #main-contact-row .contact-col{
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+  #landing::before {
+    height: 16%;
+  }
+  /* contact us form */
+  #main-contact-row .contact-col{
+    margin-top: 10px;
+  }
+  /* modal section */
+  .modal-dialog{
+    max-width: 550px !important;
+  }
+  #main-contact-row .contact-md-nopadding{
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 577px) {
+  #landing::before {
+    height: 14%;
+  }
+  .about-items img{
+    display: none;
+  }
+  /* modal section */
+  .modal-dialog{
+    max-width: 500px !important;
+  }
+}
+
+@media (max-width: 1300px){
+  .about-items img{
+    width: 80%;
+    height: 80%;
+  }
+}
+@media (max-width: 1100px){
+  .about-items img{
+    width: 100%;
+    height: 100%;
   }
 }
