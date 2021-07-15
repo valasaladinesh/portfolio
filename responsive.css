@@ -34,12 +34,20 @@
 }
 
 @media (min-width: 0px) and (max-width: 768px) {
-  #landing::before {
+  #about::before {
     height: 16%;
+  }
+  #about{
+    margin: 0;
+    padding: 0;
+    padding-top: 30px;
   }
   /* contact us form */
   #main-contact-row .contact-col{
     margin-top: 10px;
+  }
+  #emaildiv{
+    margin-top: 20px;
   }
   /* modal section */
   .modal-dialog{
@@ -53,7 +61,7 @@
 }
 
 @media (min-width: 0px) and (max-width: 577px) {
-  #landing::before {
+  #about::before {
     height: 14%;
   }
   .about-items img{
@@ -75,5 +83,21 @@
   .about-items img{
     width: 100%;
     height: 100%;
+  }
+}
+@media (max-width: 400px){
+  .card-skills{
+    width: 8rem;
+    height: 8rem;
+    overflow:hidden;
+    padding:10px 10px;
+  }
+  .card-skills img{
+    width: 3rem;
+    height: 3rem;
+  }
+  .card-body{
+    margin: 0;
+    padding: 10px 5px;
   }
 }
