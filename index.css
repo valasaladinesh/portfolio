@@ -142,8 +142,7 @@
     height: 18%;
     top: 0px;
     left: 0px;
-    /* background: url("/images/background.jpeg") no-repeat center center/cover; */
-    background: url("/portfolio/images/background.jpeg") no-repeat center center/cover;
+    background: url("/images/background.jpeg") no-repeat center center/cover;
     position: absolute;
     z-index: -1;
     opacity: 0.3;
@@ -343,12 +342,10 @@
     bottom: -50px;
   }
   .quotes::before{
-    /* content: url(/images/testimonials/quote_left.png); */
-    content: url(/portfolio/images/testimonials/quote_left.png);
+    content: url(/images/testimonials/quote_left.png);
   }
   .quotes::after{
-    /* content: url(/images/testimonials/quote_right.png); */
-    content: url(/portfolio/images/testimonials/quote_right.png);
+    content: url(/images/testimonials/quote_right.png);
     width: 10%;
     height: 10%;
   }
