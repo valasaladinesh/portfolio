@@ -26,10 +26,15 @@ navMenu();
 
 
 function loadDpImages() {
+    // var images = [
+    //     "./images/dp/dinesh_dp_1.jpg",
+    //     "./images/dp/dinesh_dp_2.jpg",
+    //     "./images/dp/dinesh_dp_3.jpg"
+    // ]
     var images = [
-        "./images/dp/dinesh_dp_1.jpg",
-        "./images/dp/dinesh_dp_2.jpg",
-        "./images/dp/dinesh_dp_3.jpg"
+        "./portfolio/images/dp/dinesh_dp_1.jpg",
+        "./portfolio/images/dp/dinesh_dp_2.jpg",
+        "./portfolio/images/dp/dinesh_dp_3.jpg"
     ]
     
     var dpimage = document.getElementById('dp');
