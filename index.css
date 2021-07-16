@@ -377,6 +377,10 @@
     -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px;
   }
+  .contact-col .card{
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+  }
   .img-border{
     width: 50px;
     height: 50px;
