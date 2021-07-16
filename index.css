@@ -313,6 +313,9 @@
   .modal-dialog{
     max-width: 1000px !important;
   }
+  .modal-header{
+    border: none;
+  }
   .bi-modal{
     height: 100px !important;
     color: var(--bg-blue);
