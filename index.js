@@ -24,6 +24,26 @@ function navMenu(){
 }
 navMenu();
 
+// for closing and opening when clicked on expanded navbar items
+function loadNavBarClicks() {
+    const navLinks = document.querySelectorAll('.nav-item')
+    const toggleBtn = document.getElementById('collapseBtn')
+    navLinks.forEach((l) => {
+        l.addEventListener('click', () => { 
+            toggleBtn.click() 
+        })
+    })
+
+    document.addEventListener("click", function (event) {
+        var clickover = event.target;
+        var clsList = document.querySelector(".navbar-collapse").classList;
+        var opened = clsList.contains("navbar-collapse") && clsList.contains("show");
+        if (opened === true && !clickover.classList.contains("navbar-toggle")) {
+            toggleBtn.click()
+        }
+
+    })
+}
 
 function loadDpImages() {
     // var images = [
@@ -42,7 +62,7 @@ function loadDpImages() {
     setInterval(function () {
         // dpimage.src = "url(" + images[i] + ")";
         dpimage.src = images[i];
-        console.log(dpimage);
+        // console.log(dpimage);
         i = i + 1;
         if (i == images.length) {
             i = 0;
@@ -52,4 +72,5 @@ function loadDpImages() {
 
 window.addEventListener('DOMContentLoaded', (event) => {
     loadDpImages();
+    loadNavBarClicks();
 });

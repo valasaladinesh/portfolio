@@ -86,6 +86,13 @@
   #header{
     background: white;
   }
+  /* color to show when opened on top of background */
+  .navbar-collapse.collapsing{
+    background: white;
+  }
+  .navbar-collapse.collapse{
+    background: white;
+  }
   .navbar{
     position: absolute;
     top: 0;
