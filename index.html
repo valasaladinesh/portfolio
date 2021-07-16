@@ -109,7 +109,7 @@
   </div>
 
   <!-- Skills and about section-->
-  <section class="text-center pt-header px-4" id="about">
+  <section class="text-center pt-header px-md-4 px-0" id="about">
     <div class="container-fluid">
       <h1 class="text-center fw-bold">About</h1>
       <div class="row mb-3 mt-5 pb-5 row-skills">
@@ -241,6 +241,7 @@
 
   <!-- technology slider -->
   <div class="container mx-auto" id="tech-slider">
+  <!-- <div class="container" id="tech-slider"> -->
     <div class="row justify-content-center align-items-center">
       <div class="owl-carousel owl-theme mt-5">
         <div class="item my-2 ms-2">
@@ -623,6 +624,7 @@
     crossorigin="anonymous"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <!-- custome js -->
+  <!-- <script src="/index.js"></script> -->
   <script src="/portfolio/index.js"></script>
 
   <!-- jquery cdn js -->
@@ -652,14 +654,17 @@
       autoplaySpeed: 700,
       responsive: {
         0: {
-          items: 1,
-        },
-        370: {
           items: 2,
+          center:true,
         },
-        500: {
+        300: {
+          items: 2,
+          center:true,
+        },
+        527: {
           items: 3,
           margin: 5,
+          center:true,
         },
         768: {
           items: 3,
