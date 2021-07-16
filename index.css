@@ -90,7 +90,7 @@
   .navbar-collapse.collapsing{
     background: white;
   }
-  .navbar-collapse.collapse{
+  .navbar-collapse.collapse.show{
     background: white;
   }
   .navbar{
