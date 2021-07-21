@@ -26,23 +26,60 @@ navMenu();
 
 // for closing and opening when clicked on expanded navbar items
 function loadNavBarClicks() {
-    const navLinks = document.querySelectorAll('.nav-item')
+    /*const navLinks = document.querySelectorAll('.nav-item')
     const toggleBtn = document.getElementById('collapseBtn')
-    navLinks.forEach((l) => {
-        l.addEventListener('click', () => { 
-            toggleBtn.click() 
-        })
-    })
+    let widthMatch = window.matchMedia("(max-width: 993px)");
 
-    document.addEventListener("click", function (event) {
+    var elemEventHandler = function() { toggleBtn.click() };
+    var docEventHandler = function(event) { 
         var clickover = event.target;
         var clsList = document.querySelector(".navbar-collapse").classList;
         var opened = clsList.contains("navbar-collapse") && clsList.contains("show");
         if (opened === true && !clickover.classList.contains("navbar-toggle")) {
             toggleBtn.click()
         }
+    };
 
-    })
+    widthMatch.addEventListener('change', function(mm) {
+        if (mm.matches) {
+            console.log("lesser than 993");
+            // it matches the media query: that is, min-width is >= 500px
+            navLinks.forEach((l) => {
+                l.addEventListener('click', elemEventHandler)
+            })
+            document.addEventListener("click", docEventHandler(event));
+        }
+        else {
+            console.log("greater than 993");
+            // it no longer matches the media query
+            // remove the event listener
+            navLinks.forEach((l) => {
+                l.removeEventListener("click",elemEventHandler);
+            })
+            document.removeEventListener("click", docEventHandler(event));
+        }
+    }); */
+
+    //This is for white background coming for large screens without collapse/expand button
+    if (window.innerWidth < 993) {
+        const navLinks = document.querySelectorAll('.nav-item')
+        const toggleBtn = document.getElementById('collapseBtn')
+        navLinks.forEach((l) => {
+            l.addEventListener('click', () => {
+                toggleBtn.click()
+            })
+        })
+
+        document.addEventListener("click", function (event) {
+            var clickover = event.target;
+            var clsList = document.querySelector(".navbar-collapse").classList;
+            var opened = clsList.contains("navbar-collapse") && clsList.contains("show");
+            if (opened === true && !clickover.classList.contains("navbar-toggle")) {
+                toggleBtn.click()
+            }
+
+        })
+    }
 }
 
 function loadDpImages() {
